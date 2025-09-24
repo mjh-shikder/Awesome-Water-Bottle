@@ -6,7 +6,7 @@ import Bottles from './components/Bottles/Bottles'
 // const bottlesPromise2 = fetch('https://raw.githubusercontent.com/mjh-shikder/Bottle-Data/refs/heads/master-branch/Bottles.json')
 //   .then(res => res.json()); 
 
-
+const bottlesPromise = fetch('bottle.json').then(res => res.json());
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       
       <h1>Buy Awesome Water BOttle</h1>
       <Suspense fallback={ <h3>Bottles are Loading...</h3> }>
-       <Bottles bottlesPromise={bottlesPromise2}></Bottles> 
+       <Bottles bottlesPromise={bottlesPromise}></Bottles> 
     </Suspense>
       
     </>
